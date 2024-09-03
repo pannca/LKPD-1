@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .bungkus {
+            background-color: #1E2A5E;
+            width: 25%;
+            padding: 30px;
+            margin: 100px auto;
+            flex-direction: column;
+            display: flex;
+            gap: 1em;
+            border-radius: 10px;
+        }
+
+        .bungkus input {
+            padding: 3px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .bungkus button {
+            padding: 3px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .bungkus h2 {
+            text-align: center;
+            color: white;
+        }
+
+        .bungkus div {
+            color: white;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bungkus">
+        <h2>Mencari Data</h2>
+        <input type="text" id="input">
+        <button id="button">Search</button>
+        <div id="output">tidak mencari data</div>
+    </div>
+    
+    <script>
+        document.getElementById("button").addEventListener("click", function() {
+            let hasil = document.getElementById("input").value;
+            
+            document.getElementById("output").textContent = "proses mencari";
+            
+            setTimeout(function() {
+                document.getElementById("output").textContent = "mencari data " + hasil;
+            }, 1000); 
+        });
+    </script> 
+</body>
+</html>
